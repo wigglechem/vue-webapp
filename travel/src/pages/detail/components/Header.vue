@@ -41,14 +41,11 @@ export default {
         }
     },
     mounted(){
-        
-    },
-    activated(){
         window.addEventListener('scroll',this.handleScroll)
     },
-    deactivated(){
-        window.removeEventListener('scroll',this.handleScroll)
-    }
+    unmounted () {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
 }
 </script>
 <style lang="stylus" scoped>
